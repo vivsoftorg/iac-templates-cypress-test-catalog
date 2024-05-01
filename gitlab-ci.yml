@@ -43,7 +43,7 @@ plan:
     - main
     - merge_requests
   script:
-    - gitlab-terraform plan -var-file tfvars.json
+    - gitlab-terraform plan -var-file tfvars.hcl
     - gitlab-terraform plan-json
   artifacts:
     name: plan
@@ -70,7 +70,7 @@ destroy:
   environment:
     name: production
   script:
-    - gitlab-terraform destroy -var-file tfvars.json
+    - gitlab-terraform destroy -var-file tfvars.hcl
   dependencies:
     - plan
   when: manual
