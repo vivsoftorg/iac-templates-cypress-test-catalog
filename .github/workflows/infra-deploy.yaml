@@ -15,7 +15,7 @@ on:
       - qa
       - release*
 env:
-  tf_version: "latest"
+  tf_version: "1.8.3"
   tg_version: "latest"
 
 concurrency:
