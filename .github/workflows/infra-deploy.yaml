@@ -31,6 +31,11 @@ jobs:
         uses: actions/checkout@master
         with:
           submodules: recursive
+      - name: Abort if First Commit
+        if: github.event.before == '0000000000000000000000000000000000000000'
+        run: |
+          echo "This is the first commit. Exiting the workflow."
+          exit 0
 
       - name: Set env vars (default)
         run: |
