@@ -16,7 +16,7 @@ on:
       - release*
 env:
   tf_version: "1.8.3"
-  tg_version: "latest"
+  tg_version: "v0.72.6"
 
 concurrency:
   group: ${{ github.ref }}
